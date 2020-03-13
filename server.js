@@ -34,7 +34,7 @@ const port = process.env.PORT || 3000;
 
 db.sync()
   .then(()=> {
-    app.listen(port, ()=> {
+    app.listen(port, process.env.IP, ()=> {
       console.log(`listening on port ${port}`)
     });
   });
